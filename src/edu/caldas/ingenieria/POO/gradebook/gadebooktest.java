@@ -12,10 +12,12 @@ public gadebooktest(){
 		
 		Gradebook gradebook = new Gradebook();
 		
-		System.out.println(" give a course name: ");
-		
+		System.out.println(" give coruse name ");
 		String courseName = sc.nextLine();
+		Gradebook gradebookprogramacion00 = new Gradebook(" programacion orientada a objertos"); 
 		
+		System.out.println(" give a course name(): " + gradebook.getcoursename());
+		System.out.println(" programacion orientada a objetos():"+ gradebookprogramacion00);
 		gradebook.displayMessage(courseName);
 	}
 }
