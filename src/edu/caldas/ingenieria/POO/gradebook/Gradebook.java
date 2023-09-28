@@ -1,5 +1,7 @@
 package edu.caldas.ingenieria.POO.gradebook;
 
+import java.util.Scanner;
+
 public class Gradebook {
 	
 	private String coursename;
@@ -8,9 +10,7 @@ public class Gradebook {
 	// construtor vacio
 	{
 	}
-	
 	public Gradebook(String coursename) {
-		super();
 		this.coursename = coursename;
 		// TODO Auto-generated constructor stub
 		// this escoger el atributo principal
@@ -23,7 +23,29 @@ public class Gradebook {
 	public void  setcoursename(String coursename) {
 		this.coursename = coursename;
 	}
-		public void displayMessage(String course) {
-			System.out.println(" hello course programacion orientada a objetos 2023 " + course);	
+	// zona de logica
+		public void displayMessage(String coursename) {
+			System.out.println(" hello course programacion orientada a objetos 2023 " + coursename);	
+	}
+		
+	public void determineClassAveriguar() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int total = 0;  
+		int grade; 
+		int gradeCounter = 1; 
+		int average;
+		
+		while ( gradeCounter <=5) {
+			System.out.println( " por favor ingresar la nota ");
+			grade = sc.nextInt();
+			total = total + grade;
+			gradeCounter = gradeCounter + 1;
+		}
+		
+		average = total/5;
+		System.out.println(" el promedio de las notas son " + average);
+		
 	}
 }
