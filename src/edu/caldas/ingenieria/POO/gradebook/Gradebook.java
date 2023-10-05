@@ -31,21 +31,26 @@ public class Gradebook {
 	public void determineClassAveriguar() {
 		
 		Scanner sc = new Scanner(System.in);
+		double total = 0;  
+		double grade; 
+		double gradeCounter = 1; 
+		double average = 0;
 		
-		int total = 0;  
-		int grade; 
-		int gradeCounter = 1; 
-		int average;
+		System.out.println(" ingrese la nota o ingrese -1 para salir");
+	    grade = sc.nextDouble();
 		
-		while ( gradeCounter <=5) {
-			System.out.println( " por favor ingresar la nota ");
-			grade = sc.nextInt();
+		while ( grade != -1) {
 			total = total + grade;
 			gradeCounter = gradeCounter + 1;
+			
+			System.out.println(" ingrese la tecla -1 para salir");
+			grade = sc.nextDouble();
+		}
+		if (gradeCounter !=0) {
+			average = total/gradeCounter;
 		}
 		
-		average = total/5;
-		System.out.println(" el promedio de las notas son " + average);
+		System.out.println(" el promedio total de la nota es  " + average);
 		
 	}
 }
