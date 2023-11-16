@@ -1,4 +1,4 @@
-package ucaldas.edo.ejemplo.herencia;
+package edu.caldas.ingenieria.POO;
 
 import ucaldas.edo.ejemplo.herencia.persona;
 
